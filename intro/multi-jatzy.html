@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Lorte Yatzy</title>
+    </head>
+    <body>
+        <h1>Multi-Yatzy</h1>
+            <p>This page introduces the Multi-Yatzy game. It describes the game background, its rules, and a guide on how to execute it.</p>
+
+        <h2>Background</h2>
+            <p>Multi-yatzy is an extension of the popular and well-known <a href="https://da.wikipedia.org/wiki/Yatzy" target="_blank">Yatzy dice game</a>. It is normally played with 5 <a href="#dice-picture">6-valued fair dice</a>. However, in this extension the game can be configured with any number of dice between 5 and 20.</p>
+            <figure>
+                <img id="dice-picture" src="./Assets/3d-dice.png" alt="An image of a 6-valued dice.">
+                <figcaption>1: A typical dice used in Yatzy.</figcaption> 
+            </figure>
+            <p>This version is played by a single simple computer player.</p>
+
+        <h2>Rules</h2>
+            <p>The game consists of playing 15 rounds. In each round, the player makes a single roll of the chosen number of dice. Then the computer calculates the score that can be achieved with the given dice roll and round type, and registers the score in a scoreboard.</p> 
+            <figure>
+                <p>Figure 2: Multi Yatzy Scoreboard.</p>
+                <table>
+                    <tr>
+                        <td>1s</td>
+                        <td>6534625542</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2s</td>
+                        <td>1162434514</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Total Score</td>
+                        <td></td>
+                        <td>137</td>
+                    </tr>
+                </table>
+            </figure>
+
+        <h1>Scoring rules</h1>
+            <dl>
+                <dt>Single Dice:</dt>
+                <dd>The score of the rounds ones, two, threes, fours, fives, sizes is computes as the number of dices times its face value, e.g. if the roll shows 5 four-dice, the score is 5*4.</dd>
+                <dt>Bonus:</dt>
+                <dd>To earn the bonus, at least a score of 30 must be achieved in the single dice rounds combined.</dd>
+                <dt>One Pair:</dt>
+                <dd>The dice roll must show at least two dice with identical face value.</dd>
+                <dt>And so on</dt>
+                <dd>...</dd>
+                <dt>Yatzy:</dt>
+                <dd>A dice roll is Yatzy if it containts 5 identical dice. A yatzy gives a score of 50.</dd> 
+            </dl>
+        
+        <h1>Executing the Game</h1>
+            <p>The game is implemented in node.js and assumes that is installed. The game can be started from the command line by executing the command</p>
+            <code>command> node ./node.js</code>
+            <p>Then it will print out the scoreboard in the terminal, and generate a file "scores.html" that can be viewed in your favourite browser.</p>
+            <p>Authored by Brian Nielsen <a href="mailto:bnielsen@cs.aau.dk">bnielsen@cs.aau.dk</a>. Copyright ©: none whatsoever. Responsibility: none whatsoever.</p>
+    </body>
+</html>
