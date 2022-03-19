@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IWP Validation Exercise</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+    <form id="myForm" >
+        How many little monkeys are jumping on the bed? <input type="text" id="monkeys" value="" >
+    </form>
+    <div id="message" style="white-space: pre;" />
+<script>
+function monkeysJump(event) {
+
+  //Siden refresher ikke når der kommer et input
+  event.preventDefault();
+  
+  const inputValue = document.getElementById("monkeys").value;
+
+  console.log(inputValue);
+  function delay(time) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
+
+  try {
+      if(inputValue === "") throw "empty string you donkey!";
+      if(isNaN(inputValue)) throw "This is not a number you shithead!";
+      if(inputValue < 1) throw "This number is too low, Kadeem";
+      if(inputValue > 5) throw "Fucking B1T???? Too high, just like your death count...";
+      console.log(`${inputValue} is/are jumping of a bridge!`);
+  } catch (error) {
+      delay(2000).then(() => console.log(`${error}`));
+  }
+
+}
+
+document.getElementById("myForm").addEventListener("submit", monkeysJump);
+</script>
+</body> 
