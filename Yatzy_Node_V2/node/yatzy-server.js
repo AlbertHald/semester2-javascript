@@ -37,7 +37,7 @@ const publicResources="node/PublicResources/";
 //secture file system access as described on 
 //https://nodejs.org/en/knowledge/file-system/security/introduction/
 const rootFileSystem=process.cwd();
-function securePath(userPath){
+function securePath(userPath) {
   if (userPath.indexOf('\0') !== -1) {
     // could also test for illegal chars: if (!/^[a-z0-9]+$/.test(filename)) {return undefined;}
     return undefined;
@@ -93,7 +93,7 @@ function guessMimeType(fileName){
   return (ext2Mime[fileExtension]||"text/plain");
 }
 
-/* Helper functions to retrieve request objects and send response objects    */  
+/* Helper functions to retrieve request objects and send response objects */  
 const InternalError ="Internal Error";
 
 /* send a response with htmlString as html page */
