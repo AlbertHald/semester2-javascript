@@ -67,7 +67,7 @@ function validateYatzyConfigData(gameFormData){
 function validateYatzyRoundData(roundFormData){
   //gameID should be encrypted
   if(roundFormData.has("gameID")) {
-     let roundData={gameID:Number(roundFormData.get("gameID"))};
+     let roundData={gameID:Number(roundFormData.get("gameID"))};  
      let game=yatzyController.getGame(roundData.gameID);
      if(game && !game.gameOver())
        return roundData;
