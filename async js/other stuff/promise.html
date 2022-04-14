@@ -5,9 +5,35 @@
         <title>Making Promises</title>
     </head>
     <body>
+        <h1>Kæmpe god knap</h1>
+        <button id="hejKnap" onclick="printSkrift()">   Hi   </button>
+
+        <!--Vi Prøver lige det her senere-->
+        <!-- <form id ="oldEnough">
+            What is your age <input type="text" id ="age" value="Give your age:">
+        </form>  -->
+
         <script>
-            function printSkrift()
+            function printSkrift() {
+
+                //Making a promise
+                const hejPromise = new Promise((resolve, reject) => {
+                    try {
+                        setTimeout(() => {console.log('Hi')}, 2000);
+                    } catch (error) {
+                        console.log(error);
+                    }
+                });
+
+                //Chaining promises... Som ikke virker :)
+                hejPromise.then(() =>{
+                    setTimeout(() => {console.log('IWP')}, 2000);
+                });
+                hejPromise.then(() =>{
+                    setTimeout(() => {console.log('Virker det her lort?')}, 2000);
+                });
+            }
+            
         </script>
-        <button id="hejKnap" onclick="">Tryk på mig!</button>
     </body>
 </html>
