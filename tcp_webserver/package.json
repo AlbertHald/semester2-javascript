@@ -1,0 +1,14 @@
+{
+  "name": "tcp_webserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "AlbertHald",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node ."},
+  "dependencies": {
+    "@types/node": "^17.0.30",
+    "net": "^1.0.2"
+  }
+}
