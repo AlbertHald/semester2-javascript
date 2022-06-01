@@ -47,10 +47,10 @@ function processReq(req,res) {
     res.write(reason);
 } */
 
-server.listen(port, (error) => {
+server.listen(port, hostname, (error) => {
     if(error) {
         console.log(error);
     } else {
-        console.log(`Server is listening on port: ` + port);
+        console.log(`Server is listening on: http://${hostname}:${port}/`);
     }
 });
