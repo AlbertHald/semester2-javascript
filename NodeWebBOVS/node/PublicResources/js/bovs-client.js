@@ -87,13 +87,22 @@ function retriveBeers() {
   
   jsonFetch("beers").then((beer)=>{
     console.log("Object recived: "); console.log(beer); //expect an empty object. 
+    let newSelect = document.createElement("select");
+    newSelect.name = "beer"; newSelect.id = "beers_menu_id"; newSelect.required = true; 
+    let beerList = document.getElementById("beers_menu_id");
     beer.beers.forEach(element => {
-      document.getElementById("beers_menu_id").value.replaceChildren(element);
-      document.getElementById("beers_menu_id").text.replaceChildren(element);
+       console.log(element);
+       
+       let newOption = document.createElement("option");
+       newOption.value = element; newOption.text = element;
+       newSelect.appendChild()
     });
+
+    //Replaces the beerList with the new select beerlist with the appended options of beers
+    beerList.replaceWith(newSelect);
     //Set Output to the new bac value fetched from server
     
   }).catch(e=>console.log("Ooops "+e.message));
 }
 
-setInterval(retriveBeers, 5000);
+setInterval(retriveBeers(), 30000);
