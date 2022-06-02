@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>IWP BØVS (Basis Øl Vurderings System) </title>
+    <link rel="stylesheet" type="text/css" href="css/simple.css">
+</head>
+<body>
+
+<h1 id="id1"> IWP BØVS (Basis Øl Vurderings System)</h1>
+
+<section>
+  <h2>IWP BØVS Admin</h2>
+  <!-- action in form has to be route because of client side json url -->
+  <form id="beerCreation_id" action="beers" method="post">
+    <fieldset>
+      <legend>Create new beer</legend>
+      <div class="myFormLayout">
+        <label for="creatorName_id">Creator Name</label>
+        <input type="text" name="creatorName" id="creatorName_id" placeholder="BingBong" required minlength="1" maxlength="30">
+        <label for="newBeer_id">New Beer Name</label>
+        <input type="text" name="newBeer" id="newBeer_id" required minlength="1" maxlength="30">
+        <input type="submit" id="createBtn_id" value="Create Beer">
+      </div>
+    </fieldset>
+  </form>
+</section>
+
+<section>
+  <h2> IWP BØVS (Basis Øl Vurderings System)</h2>
+  <form id="beerEvalForm_id" action="beerEvaluations" method="post">
+    <fieldset>
+      <legend>Evaluation form:</legend>
+      <div class="myFormLayout"> 
+      <label for="name_id"> Name</label>
+      <input type="text" name="name" id="name_id" placeholder="Mickey" required minlength="1" maxlength="30">  
+ 
+      <label for="beers_menu_id">Beer:</label>
+
+      <select name="beer" id="beers_menu_id" required>
+        <option value="">--Please choose--</option>
+        <option value="Porse Guld">Porse Guld</option>
+      </select>     
+
+      <label for="score_id"> Score: 1 (Bad) - 10 (Excellent):</label> 
+      <input type="number" name="score" id="score_id" placeholder="5" min="1" max="10" required>   
+  <input type="submit" id="evaluateBtn_id" value="Submit Evaluation">
+</div>   
+</fieldset>
+</form>
+
+</section>
+
+<script  src="js/bovs-client.js"></script> 
+</body>
+</html>
